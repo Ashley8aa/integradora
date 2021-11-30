@@ -34,28 +34,40 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
   ======================================================== -->
 	</head>
 
-	<body>
-		<header id="header" class="fixed-top d-flex align-items-center">
-			<div class="container d-flex align-items-center">
+	<body style="background-color:#FFB52E">
 
-				<div class="logo me-auto">
-					<h1><a style="color:orange" href="pricing.html">Cotizar</a></h1>
-					<!-- Uncomment below if you prefer to use an image logo -->
-					<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-				</div>
-				<nav id="navbar" class="navbar order-last order-lg-0">
-			</div>
-		</header><!-- End Header -->
+
+
 		<div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh">
-			<?php if ($_SESSION['role'] == 'admin') { ?>
+
+		<?php if ($_SESSION['role'] == 'admin') { ?>
 				<!-- For Admin -->
-				<div class="card" style="width: 18rem;">
-					<img src="img/admin-default.png" class="card-img-top" alt="admin image">
+				<div class="card" style="width: 13rem;">
+					<img src="images\icon-image\user.png" class="card-img-top" alt="admin image">
 					<div class="card-body text-center">
+						<header id="header" class="fixed-top d-flex align-items-center">
+			
+							<div class="container d-flex align-items-center">
+							
+								<div>
+									<div class="logo me-auto">
+										<h2><a style="color:black" href="index.html">Página Principal</a></h>
+										<!-- Uncomment below if you prefer to use an image logo -->
+										<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+									</div>
+									<nav id="navbar" class="navbar order-last order-lg-0">
+								</div>
+							
+
+							</div>
+
+						</header><!-- End Header -->
+
+						
 						<h5 class="card-title">
 							<?= $_SESSION['name'] ?>
 						</h5>
-						<a href="logout.php" class="btn btn-primary" style="background-color:#3498db;">Logout</a>
+						<a href="logout.php" class="btn btn-dark" style="background-color:black;">Logout</a>
 					</div>
 				</div>
 				<div class="p-3">
@@ -89,33 +101,41 @@ if (isset($_SESSION['username']) && isset($_SESSION['id'])) {   ?>
 					<?php } ?>
 				</div>
 			<?php } else { ?>
+				
 				<!-- FORE USERS -->
-				<header id="header" class="fixed-top d-flex align-items-center">
-					<div class="container d-flex align-items-center">
+				<div>
+					<header id="header" class="fixed-top d-flex align-items-center">
 
-						<div class="logo me-auto">
-							<h1><a style="color:orange" href="pricing.html">Cotizar</a></h1>
-							<!-- Uncomment below if you prefer to use an image logo -->
-							<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+						<div class="container d-flex align-items-center">
+
+
+							<div class="logo me-auto">
+								<h2><a style="color:black" href="cotizar.php">COTIZAR</a></h2>
+								<!-- Uncomment below if you prefer to use an image logo -->
+								<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+							</div>
+
+							<nav id="navbar" class="navbar order-last order-lg-0">
+
+
 						</div>
 
-						<nav id="navbar" class="navbar order-last order-lg-0">
-
-
-					</div>
-				</header><!-- End Header -->
+					</header><!-- End Header -->
+				</div>
 				<div class="card" style="width: 13rem;">
 					<img src="images\icon-image\user.png" class="card-img-top" alt="admin image">
 					<div class="card-body text-center">
 						<h5 class="card-title">
 							<?= $_SESSION['name'] ?>
 						</h5>
-						<a href="logout.php" class="btn btn-warning">Logout</a>
+						<a href="logout.php" class="btn btn-dark">Logout</a>
 					</div>
 				</div>
 			<?php } ?>
 		</div>
+		
 	</body>
+
 
 	</html>
 <?php } else {
