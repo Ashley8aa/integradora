@@ -26,7 +26,7 @@ if ($resultado->num_rows>0){
         echo "<td>".$fila ['name']."</td>";
         echo "<td>".$fila ['description']."</td>";
         echo "<td>".$fila ['price']."</td>";
-        echo "<td>".$fila ['Talla']."</td>";
+        echo "<td>".$fila ['talla']."</td>";
         echo "</tr>";
     }
 }
